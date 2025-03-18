@@ -1,0 +1,111 @@
+/* General body and container styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Game container styling */
+.container {
+    margin-top: 1.5rem; /* Reduced margin-top for compact layout */
+}
+
+/* Game container styling */
+.game-container {
+    background-color: white;
+    padding: 1rem; /* Reduced padding for compactness */
+    border-radius: 7px; /* Reduced border-radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading and text */
+h1 {
+    font-size: 1rem; /* Reduced font size */
+    margin-bottom: 1rem;
+    color: #343a40;
+}
+
+p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* Image container and styling */
+#country-image {
+    max-width: 70%; /* Ensure it fits within the container */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+/* Form and input styling */
+.form-label {
+    font-weight: bold;
+    color: #495057;
+}
+
+.form-control {
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.25rem rgba(38, 143, 255, 0.25);
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.125rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:active {
+    background-color: #1e7e34;
+}
+
+.arrow-img {
+    width: 12px;  /* Smaller width */
+    height: 12px; /* Smaller height */
+    margin-left: 5px; /* Margin between arrow and text */
+    vertical-align: middle; /* Align the arrows vertically with text */
+    display: inline-block; /* Make the arrow behave like inline text */
+}
+
+/* Result text styling */
+#result {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#attempts {
+    font-weight: normal;
+}
+
+/* Comparison text styling */
+#comparison {
+    font-size: 0.9rem; /* Reduced font size for compactness */
+    margin-top: 1rem;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: pre-wrap
+}
