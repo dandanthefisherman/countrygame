@@ -56,7 +56,7 @@ body {
 
 /* Image styling */
 #country-image {
-    max-width: 50%;
+    max-width: 70%;
     height:auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -114,7 +114,7 @@ button:active {
     border-radius: 3px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     white-space: pre-wrap;
-    font: 0.5em sans-serif;
+    font: 0.6em sans-serif;
     
 }
 
