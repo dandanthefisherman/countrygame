@@ -16,7 +16,7 @@ body {
 .container-fluid {
     margin-top: 2rem;
     padding: 1rem; /* Adds padding inside the container */
-    width: 70vw; /* Prevents it from taking full width */
+    width: 90vw; /* Prevents it from taking full width */
     max-width: 1200px; /* Limits the maximum width */
     max-height: auto; /* Ensures the container has a minimum height */
     display: flex;
@@ -28,6 +28,13 @@ body {
     max-height: 90vh;
 }
 
+@media (max-width: 768px) {
+    .container-fluid {
+        width: 95vw; /* Reduce width slightly on smaller screens */
+        padding: 0.8rem; /* Reduce padding for better fit */
+    }
+}
+
 /* Row styling */
 .row {
     display: flex;
@@ -35,7 +42,7 @@ body {
     gap: 1.5rem; /* Adds space between the columns */
     flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
     width: 100%; /* Ensures the row spans the full width */
-    padding: 1;
+    padding: 1rem;
 
 }
 
@@ -69,10 +76,12 @@ body {
     border: 1px solid #ced4da;
     font-size: 1rem;
     margin-bottom: 1rem;
+    align-content: center;
+
 }
 
 h1 {
-    font-size: 1.5rem; /* Smaller than default */
+    font-size: 1.3rem; /* Smaller than default */
     text-align: center;
     margin-bottom: 0.5rem; /* Reduce spacing */
 }
@@ -85,7 +94,7 @@ h2 {
 }
 
 button {
-    width: 100%;
+    width: 50%;
     padding: 1rem;
     font-size: 1.125rem;
     background-color: #28a745;
