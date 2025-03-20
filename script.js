@@ -1397,7 +1397,7 @@ document.getElementById("submit").addEventListener("click", function() {
     if (guessedCountry) {
         // If the guess is correct
         if (guessedCountry.name.toLowerCase() === chosenCountry.name.toLowerCase()) {
-            document.getElementById("result").innerHTML = `${guessedCountry.name} is correct! Number of attempts: ${attempts}. <a href="${googleMapUrl}" target="_blank">Click here to see the country.</a> See you tommorow to guess new random place`;
+            document.getElementById("result").innerHTML = `${guessedCountry.name} is correct! Number of attempts: ${attempts}. <a href="${googleMapUrl}" target="_blank">Click here to see the country.</a> Come back tommorow to guess new random place. A new random place will appear each day.`;
 
 
             // Display the comparison results
