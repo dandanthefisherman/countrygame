@@ -428,6 +428,13 @@ const countries = [
                 area: 357022  // in km²
             },
             {
+                name: "Georgia",
+                population: 3.7,  // in millions
+                gdp: 0.03,  // in trillion USD
+                maxElevation: 5203,  // in meters (Zugspitze)
+                area: 69700  // in km²
+            },
+            {
                 name: "Ghana",
                 population: 32,  // in millions
                 gdp: 0.07,  // in trillion USD
@@ -914,7 +921,7 @@ const countries = [
                 {
                     name: "Papua New Guinea",
                     population: 9,  // in millions
-                    gdp: 0.02,  // in trillion USD
+                    gdp: 0.03,  // in trillion USD
                     maxElevation: 4509,  // in meters (Mount Wilhelm)
                     area: 462840  // in km²
                 },
@@ -1342,9 +1349,34 @@ const countries = [
             
     // Add more countries similarly...
 
+// List of countries with corresponding images and map links for 14 days
+const dailyCountries = [
+    { name: "New Zealand", image: "newzealand.png", map: "https://www.google.co.uk/maps/@-40.9715378,173.6765153,123452m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D" },
+    { name: "Sri Lanka", image: "srilanka.png", map: "https://www.google.co.uk/maps/@8.6823843,81.4507647,146632m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDMxNi4wIKXMDSoASAFQAw%3D%3D" },
+    { name: "Nepal", image: "nepal.png", map: "https://www.google.co.uk/maps/@29.2270785,81.9682565,182135m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDMxNi4wIKXMDSoASAFQAw%3D%3D" },
+    { name: "Papua New Guinea", image: "papuanewguinea.png", map: "https://www.google.co.uk/maps/@-4.891908,150.2658789,843503m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDMxNi4wIKXMDSoASAFQAw%3D%3D" },
+    { name: "Oman", image: "oman.png", map: "https://www.google.co.uk/maps/@19.0547814,54.6954745,132136m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDMxNi4wIKXMDSoASAFQAw%3D%3D" },
+    { name: "Italy", image: "italy.jpg", map: "https://goo.gl/maps/ItalyMapLink" },
+    { name: "Kenya", image: "kenya.jpg", map: "https://goo.gl/maps/KenyaMapLink" },
+    { name: "India", image: "india.jpg", map: "https://goo.gl/maps/IndiaMapLink" },
+    { name: "Mexico", image: "mexico.jpg", map: "https://goo.gl/maps/MexicoMapLink" },
+    { name: "South Korea", image: "southkorea.jpg", map: "https://goo.gl/maps/SouthKoreaMapLink" },
+    { name: "Germany", image: "germany.jpg", map: "https://goo.gl/maps/GermanyMapLink" },
+    { name: "Australia", image: "australia.jpg", map: "https://goo.gl/maps/AustraliaMapLink" },
+    { name: "United Kingdom", image: "uk.jpg", map: "https://goo.gl/maps/UKMapLink" },
+    { name: "South Africa", image: "southafrica.jpg", map: "https://goo.gl/maps/SouthAfricaMapLink" }
+];
+
+// Get the current day index (0-13) using the date
+const startDate = new Date('2025-03-19');  // Set the start date
+const today = new Date();
+const dayIndex = Math.floor((today - startDate) / (1000 * 60 * 60 * 24)) % dailyCountries.length;
+
+const todayCountry = dailyCountries[dayIndex];
 // Fixed country to guess
-const chosenCountry = countries.find(country => country.name === "New Zealand");
-const googleMapUrl = "https://www.google.co.uk/maps/@-40.9715378,173.6765153,123452m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D"
+document.getElementById("country-image").src = todayCountry.image;
+const chosenCountry = countries.find(country => country.name === todayCountry.name);
+const googleMapUrl = todayCountry.map;
 
 let attempts = 0;
 
@@ -1365,7 +1397,7 @@ document.getElementById("submit").addEventListener("click", function() {
     if (guessedCountry) {
         // If the guess is correct
         if (guessedCountry.name.toLowerCase() === chosenCountry.name.toLowerCase()) {
-            document.getElementById("result").innerHTML = `${guessedCountry.name} is correct! Number of attempts: ${attempts}. <a href="${googleMapUrl}" target="_blank">Click here to see the country</a>`;
+            document.getElementById("result").innerHTML = `${guessedCountry.name} is correct! Number of attempts: ${attempts}. <a href="${googleMapUrl}" target="_blank">Click here to see the country.</a> See you tommorow to guess new random place`;
 
 
             // Display the comparison results
