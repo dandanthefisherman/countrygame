@@ -1397,8 +1397,10 @@ document.getElementById("submit").addEventListener("click", function() {
     if (guessedCountry) {
         // If the guess is correct
         if (guessedCountry.name.toLowerCase() === chosenCountry.name.toLowerCase()) {
-            document.getElementById("result").innerHTML = `${guessedCountry.name} is correct! Number of attempts: ${attempts}. <a href="${googleMapUrl}" target="_blank">Click here to see the country.</a> Come back tommorow to guess new random place. A new random place will appear each day.`;
-
+            document.getElementById("result").innerHTML = `${guessedCountry.name} is correct! Number of attempts: ${attempts}`;
+            document.getElementById("result1").innerHTML = `<a href="${googleMapUrl}" target="_blank">Click here to see the country.</a>`;
+            document.getElementById("result2").innerHTML = `Come back tommorrow to guess new country.`;
+            document.getElementById("result3").innerHTML = `A new random satellite image will appear daily`;
 
             // Display the comparison results
             displayComparison(guessedCountry);
