@@ -13,7 +13,7 @@ body {
 }
 
 /* Container styling */
-.container-fluid {
+.container{
     margin-top: 2rem;
     padding: 1rem; /* Adds padding inside the container */
     width: 90vw; /* Prevents it from taking full width */
@@ -47,17 +47,7 @@ body {
 }
 
 /* Column styling */
-.col-md-6 {
-    flex: 1; /* Makes sure both columns take equal width */
-    max-width: 45%; /* Ensures columns don’t stretch too much */
-    min-width: 400px; /* Prevents the columns from becoming too narrow */
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Prevents overflow */
- 
-}
+
 
 /* Image styling */
 #country-image {
