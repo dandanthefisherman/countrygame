@@ -1399,7 +1399,7 @@ document.getElementById("submit").addEventListener("click", function() {
         if (guessedCountry.name.toLowerCase() === chosenCountry.name.toLowerCase()) {
             document.getElementById("result").innerHTML = `${guessedCountry.name} is correct! Number of attempts: ${attempts}`;
             document.getElementById("result1").innerHTML = `<a href="${googleMapUrl}" target="_blank">Click here to see the country.</a>`;
-            document.getElementById("result2").innerHTML = `Come back tommorrow to guess new country.`;
+            document.getElementById("result2").innerHTML = `Come back tommorrow to guess a new country.`;
             document.getElementById("result3").innerHTML = `A new random satellite image will appear daily`;
 
             // Display the comparison results
@@ -1409,12 +1409,18 @@ document.getElementById("submit").addEventListener("click", function() {
             resetGame();
         } else {
             document.getElementById("result").textContent = `${guessedCountry.name} is wrong! Try again. Number of attempts: ${attempts}.`;
+            document.getElementById("result1").innerHTML = null;
+            document.getElementById("result2").innerHTML = null;
+            document.getElementById("result3").innerHTML = null;
             
             // Show comparison for the guessed country
             displayComparison(guessedCountry);
         }
     } else {
         document.getElementById("result").textContent = `Invalid country name. Please try again.`;
+        document.getElementById("result1").innerHTML = null;
+        document.getElementById("result2").innerHTML = null;
+        document.getElementById("result3").innerHTML = null;
     }
 
     // Clear the input field
